@@ -1,0 +1,328 @@
+/* Reset and Base Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Custom background color for the navbar */
+.bg-dark-teal {
+  background: linear-gradient(to right, #1995AD, #407783); /* Gradient background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+}
+
+/* Navbar brand styles */
+.navbar-brand {
+  font-size: 1.8rem; /* Increase brand font size */
+  font-weight: 600; /* Bold font */
+  color: #000000; /* White color for brand */
+}
+
+/* Navbar link styles */
+.navbar-light .navbar-nav .nav-link {
+  color: #000000; /* White text color */
+  padding: 10px 15px; /* Increased padding for links */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Hover effects for links */
+.navbar-light .navbar-nav .nav-link:hover {
+  background-color: rgba(196, 209, 212, 0.937); /* Light transparent background on hover */
+  color: #000000; /* Light teal on hover */
+}
+
+/* Styles for the toggler button */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5); /* Light border for toggler */
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" viewBox="0 0 30 30"><path stroke="white" stroke-width="3" d="M4 7h22M4 15h22M4 23h22"/></svg>'); /* Custom white icon */
+}
+
+
+/* Hero Section */
+.hero {
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black; /* Text color */
+  text-align: center;
+  position: relative; /* Necessary for layering */
+  background-image: url('static/heroSecpic.webp'); /* Ensure correct path */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Text box styling */
+.text-box {
+  background-color: #acc0c5; /* Semi-transparent white background */
+  padding: 10px 15px; /* Reduced padding around the text */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  max-width: 500px; /* Set a maximum width for the box */
+  margin: 0 auto; /* Center the box */
+}
+
+/* Animation for text */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to text */
+.hero h1.animate, .hero p.animate, .hero .explore-btn.animate {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0; /* Start invisible */
+}
+
+/* Delay animation for each element */
+.hero h1.animate {
+  animation-delay: 0.5s;
+}
+.hero p.animate {
+  animation-delay: 1s;
+}
+.hero .explore-btn.animate {
+  animation-delay: 1.5s;
+}
+
+/* Button styles */
+.explore-btn {
+  background-color: #1995AD; /* Dark teal */
+  color: #fff; /* White text */
+}
+.explore-btn:hover {
+  background-color: #A1D6E2; /* Light teal on hover */
+  color: #000; /* Dark text on hover */
+}
+
+
+
+
+/* Skills Section */
+.skills {
+  background-color: #1995AD; /* Dark teal green background */
+  padding: 60px 0; /* Increased padding for overall section */
+}
+
+.skills h2 {
+  color: #F1F1F2; /* Light text for better visibility */
+  margin-bottom: 30px; /* Added margin for space below the heading */
+  text-align: center; /* Center the heading */
+}
+
+.skill-box {
+  display: flex; /* Flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items horizontally */
+}
+
+.skill-item {
+  background-color: #A1D6E2; /* Light teal green for skill boxes */
+  color: #000; /* Black text color */
+  width: 150px; /* Fixed width for each skill box */
+  margin: 15px; /* Increased spacing between items */
+  display: flex; /* Flexbox for centering */
+  flex-direction: column; /* Stack icon and text vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text */
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px; /* Increased inner padding */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-item i {
+  color: #000; /* Black for icons */
+  margin-bottom: 10px; /* Increased spacing below icons */
+  display: block; /* Make the icon a block element */
+}
+
+/* Flexbox adjustment for 3 items per row */
+.skill-box {
+  display: grid; /* Use grid layout for better control */
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px; /* Increased gap between items */
+  justify-items: center; /* Center each item within its grid cell */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 767px) {
+  .skill-item {
+    width: 100px; /* Smaller width for mobile */
+  }
+}
+
+
+
+/* Projects Section */
+.projects {
+  background-color: #A1D6E2;
+}
+
+.project-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact {
+  background-color: #F1F1F2;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact input, .contact textarea {
+  transition: box-shadow 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.btn-primary:hover {
+  background-color: #1995AD;
+  
+}
+
+.btn-white {
+  background-color: white;
+  color: #1995AD;
+}
+
+.btn-white:hover {
+  background-color: #1995AD;
+  color: white;
+}
+
+/* 3D Effect */
+.project-card:hover {
+  transform: perspective(500px) rotateX(5deg) rotateY(5deg);
+}
+
+/* Footer */
+footer {
+  background-color: #1995AD;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+.skill-icon {
+  width: 50px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+ul.text-center {
+  padding: 0; /* Remove default padding */
+}
+
+h4 {
+  margin-bottom: 15px; /* Space between heading and list */
+}
+
+/* About Section */
+.about {
+  background-color: #A1D6E2; /* Light teal background */
+  padding: 50px 0; /* Top and bottom padding for spacing */
+  overflow: hidden; /* Prevent overflow during animation */
+  position: relative; /* Set position for child elements */
+  text-align: center; /* Center text in the section */
+}
+
+.about h2 {
+  color: #1995AD; /* Dark teal for the heading */
+  margin-bottom: 20px; /* Spacing below the heading */
+}
+
+.about p {
+  line-height: 1.6; /* Line spacing for readability */
+  color: #333; /* Darker text color for contrast */
+  margin-bottom: 20px; /* Spacing below the paragraph */
+  opacity: 1; /* Ensure it's visible */
+}
+
+.about img {
+  width: 300px; /* Fixed width for the image */
+  height: 300px; /* Fixed height for the image */
+  margin-bottom: 20px; /* Spacing below the image */
+  border: 3px solid #1995AD; /* Optional border around the image */
+  border-radius: 15px; /* Rounded corners */
+  object-fit: cover; /* Ensures the image covers the square without distortion */
+}
+
+/* Hover effect for image */
+.about img:hover {
+  transform: scale(1.05); /* Scale slightly on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about {
+    padding: 30px 15px; /* Reduced padding for smaller screens */
+    text-align: center; /* Center content on smaller screens */
+  }
+
+  .about img {
+    width: 80%; /* Make image width responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+  }
+
+  .about h2 {
+    font-size: 1.5rem; /* Smaller heading size for mobile */
+  }
+
+  .about p {
+    font-size: 1rem; /* Smaller paragraph size for mobile */
+    padding: 0 10px; /* Avoid text touching screen edges */
+  }
+
+  .about .btn {
+    width: 100%; /* Make button full-width on smaller screens */
+  }
+}
+
